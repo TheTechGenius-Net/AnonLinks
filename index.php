@@ -9,14 +9,14 @@
 
 session_start();
 
-// Options ###############
+/* ---- Options ---- */
         
 	$second = 5;             //The time in seconds the user gets redirected
 
-//########################
+//####################
 
 /**
-  Setp 1. Get the query string variable and set it in a session, then remove it from the URL.
+  Step 1. Get the query string variable and set it in a session, then remove it from the URL.
 */
 if (isset($_GET['to']) && !isset($_SESSION['to'])) {
     $_SESSION['to'] = urldecode($_GET['to']);
